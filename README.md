@@ -14,26 +14,23 @@ _This package is in early development stage when breaking changes are to be expe
 
 ## Instructions
 
-In a terminal window, start the `Julia` REPL and, after installing needed packages, execute:
+1. Download <https://github.com/gaelforget/TheNumberLine.jl>
+2. Open a terminal window & enter `TheNumberLine.jl/` folder
+3. Run `julia --project=./ src/run.jl`
+4. Proceed as prompted in the terminal
 
-```
-using TheNumberLine, Pluto
-p=dirname(pathof(TheNumberLine))
-cd(p)
-Pluto.run()
-```
+_Tips:_
 
-As prompted by `Pluto.run()`, open e.g. `http://localhost:1234` in a web browser. In the newly opened page, type `notebook1.jl` next to `Open from file:`, and hit `open`. 
+- the instructions prompted in the terminal will let you use `TheNumberLine` in your web browser as a [Pluto notebook](https://github.com/fonsp/Pluto.jl) called `notebook1.jl`
+- you will also need, but only once as a pre-requisite, to download [Julia itself](https://docs.julialang.org/en/v1/) and then add `TheNumberLine` and `Pluto` to your julia environment
 
 ## Use Example:
 
-In the so-opened `notebook1.jl`, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like this:
+Once you are looking at `notebook1.jl` via `Pluto` in your web-browser, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like this:
 
 [<img src="docs/png/add.png" width="40%">]()
 
-## Starting Point:
-
-One can always hit `reset the number line` to recover the original state of the number line:
+To go back to the starting point, hit `reset the number line` and you should now see:
 
 [<img src="docs/png/reset.png" width="30%">]() 
 
