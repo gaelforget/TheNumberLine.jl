@@ -1,5 +1,6 @@
 module TheNumberLine
 
-# Write your package code here.
+include("notebook1.jl")
+export 	markers, arrows, NumberLinePlot, NumberLineExpression
 
 end

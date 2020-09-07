@@ -3,5 +3,11 @@ uuid = "d3dd9eff-7bfc-4540-8377-597257661861"
 authors = ["Gael Forget <gforget@mit.edu> and Jane Chapin <janemchapin@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+InteractiveUtils = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+
 [compat]
 julia = "1"
