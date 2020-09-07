@@ -6,6 +6,8 @@
 [![Coverage](https://codecov.io/gh/gaelforget/TheNumberLine.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/gaelforget/TheNumberLine.jl)
 [![Coverage](https://coveralls.io/repos/github/gaelforget/TheNumberLine.jl/badge.svg?branch=master)](https://coveralls.io/github/gaelforget/TheNumberLine.jl?branch=master)
 
+The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
+
 _This package is in early development stage when breaking changes are to be expected._
 
 **Authors:** Gael Forget and Jane Chapin
