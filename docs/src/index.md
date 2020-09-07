@@ -13,7 +13,7 @@ _This package is in early development stage when breaking changes are to be expe
 
 ## Instructions
 
-In a terminal window, start the `Julia` REPL and execute:
+In a terminal window, start the `Julia` REPL and, after installing needed packages, execute:
 
 ```
 using TheNumberLine, Pluto
@@ -22,22 +22,19 @@ cd(p)
 Pluto.run()
 ```
 
-As prompted by `Pluto.run()`, open `http://localhost:1234` in a web browser. Then in the newly opened web-page, under `Open from file:` enter `notebook1.jl` and click `open`. 
+As prompted by `Pluto.run()`, open e.g. `http://localhost:1234` in a web browser. In the newly opened page, type `notebook1.jl` next to `Open from file:`, and hit `open`. 
 
-## The starting point:
+## Use Example:
 
-[<img src="../png/reset.png" width="30%">]() 
-
-Once can always recover this initial number line state by hitting `reset the number line`
-
-## Sample Application:
-
-Try entering a number of your choice in the text box and hit `add to number line`. 
-
-Repeat a few times, e.g. with different numbers, to obtain something like this:
+In the so-opened `notebook1.jl`, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like this:
 
 [<img src="../png/add.png" width="40%">]()
 
+## Starting Point:
+
+One can always hit `reset the number line` to recover the original state of the number line:
+
+[<img src="../png/reset.png" width="30%">]() 
 
 ```@autodocs
 Modules = [TheNumberLine]
