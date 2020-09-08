@@ -45,12 +45,18 @@ end
 smry
 
 # ╔═╡ 78c0fd44-f052-11ea-0264-4378e02814af
+#`Select value of x from the list : `
+#` ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
+
+#`Choose value of x using slider : `
+#` ` $(@bind b aSlider(-10:10; default=0))
+
 #TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
 TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"	
 
 # ╔═╡ 7c1434b2-ef25-11ea-0967-d756ec262715
 bb = try
-	b1=eval(Meta.parse(b))
+	isa(b,String) ? b1=eval(Meta.parse(b)) : b1=deepcopy(b)
 	!isa(b1,TestType) ? b2=parse(NumberLineType,b1) : b2=b1
 	b2
   catch

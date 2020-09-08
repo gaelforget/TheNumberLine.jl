@@ -1,11 +1,13 @@
 module TheNumberLine
 
-export 	markers, arrows, NumberLinePlot, NumberLineExpression, aSlider
+export 	NumberLinePlot, NumberLineExpression, aSlider, markers, arrows
 
 ##
 
 """
     markers(x)
+
+Setup different markers for use in `NumberLinePlot`.
 """    
 function markers(x)
     m=fill(:rtriangle,size(x))
@@ -14,27 +16,37 @@ function markers(x)
     o=fill(-0.5,size(x))
     o[x.<0] .= 0.5
     o[x.==0] .= 0.0
-    m,o
+    c=fill(:blue,size(x))
+    c[x.<0] .= :red
+    c[x.==0] .= :green
+    m,o,c
 end
 
 """
     arrows(x)
+
+Setup arrows pointing left (in red) or right (in blue) for use in `NumberLinePlot`.
 """    
 function arrows(x)
     length(x)>0 ? s=size(x) : s=(1,1)
     a=fill("⊚",s)
     p=fill(:center,s)
+    c=fill(:green,s)
     if length(x)>1
         a[x.<0] .= "<"
         p[x.<0] .= :left
+        c[x.<0] .= :red
         a[x.>0] .= ">"
         p[x.>0] .= :right
+        c[x.>0] .= :blue
     end
-    a,p    
+    a,p,c   
 end
 
 """
     NumberLinePlot(x)
+
+Display the number line sequence of operations, defined by vector `x`, as a graph.
 """    
 function NumberLinePlot(x)
     nx=length(x)
@@ -56,8 +68,8 @@ function NumberLinePlot(x)
     [plot!(plt,[xx[i];xx[i+1]],[yy[i+1];yy[i+1]],linewidth=2,c=:black) for i in 1:nx-1]
     plot!(plt,[xx[end];xx[end]],[yy[end];yy[1]],line=:dash,c=:red)
 
-    m,o=markers(x)
-    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],markersize=16) for i in 1:nx]
+    m,o,c=markers(x)
+    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
 
     #a,p=arrows(x)
     #[annotate!(plt,xx[i],yy[i]+0.03*mul,Plots.text(a[i], 14, p[i])) for i in 1:nx]
@@ -67,6 +79,8 @@ end
 
 """
     NumberLineExpression(x)
+
+Display the number line sequence of operations, defined by vector `x`, as text.
 """    
 function NumberLineExpression(x)
 	tmp1=deepcopy(x)
@@ -82,6 +96,11 @@ end
 
 import Base.show
 	
+"""
+   aSlider(range::AbstractRange,default::Number,show_value::Bool)
+
+Data type used for sliders in Pluto notebooks
+"""    
 struct aSlider
     range::AbstractRange
     default::Number

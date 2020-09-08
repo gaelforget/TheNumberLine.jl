@@ -23,7 +23,7 @@ _Tips:_
 - you will also need, but only once as a pre-requisite, to download [Julia itself](https://docs.julialang.org/en/v1/) and then add `TheNumberLine` and `Pluto` to your julia environment
 - to close the program, at the end once your are done using `TheNumberLine`, don't forget to go back to the terminal window and `Press Ctrl+C`
 
-## Use Example:
+## Use Example
 
 Once you are looking at `notebook1.jl` via `Pluto` in your web-browser, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like this:
 
@@ -33,12 +33,48 @@ To go back to the starting point, hit `reset the number line` and you should now
 
 [![reset](https://github.com/gaelforget/TheNumberLine.jl/raw/master/docs/png/reset.png)]()
 
-## API guide
+## Main Functions
 
-```@index
+```@docs
+NumberLinePlot
+NumberLineExpression
 ```
 
-```@autodocs
-Modules = [TheNumberLine]
+## Customization
+
+In the `notebook1` first code cell , simply replace the `text box` input widget
+
 ```
+`Type value of x in text box : ` 
+
+` x = ` $(@bind b html"<input type=text>")
+```
+
+for example with a `drop down menu` 
+
+```
+`Select value of x from the list : `
+` ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
+```
+
+or with a `slider`
+
+```
+`Choose value of x using slider : `
+` ` $(@bind b aSlider(-10:10; default=0))
+```
+
+And in the `notebook1` last code cell, one can 
+
+```
+TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
+```	
+
+as follows in orded to allow for real-valued inputs (i.e. not just integers) 
+
+```
+TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
+```	
+
+which can be advantageous depending on the teacher's goal, e.g. using `text box`.
 
