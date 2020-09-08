@@ -4,10 +4,9 @@ CurrentModule = TheNumberLine
 
 # TheNumberLine
 
-_This package is in early development stage when breaking changes are to be expected._
+The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
 
-```@index
-```
+_This package is in early development stage when breaking changes are to be expected._
 
 **Authors:** Gael Forget and Jane Chapin
 
@@ -22,15 +21,24 @@ _Tips:_
 
 - the instructions prompted in the terminal will let you use `TheNumberLine` in your web browser as a [Pluto notebook](https://github.com/fonsp/Pluto.jl) called `notebook1.jl`
 - you will also need, but only once as a pre-requisite, to download [Julia itself](https://docs.julialang.org/en/v1/) and then add `TheNumberLine` and `Pluto` to your julia environment
+- to close the program, at the end once your are done using `TheNumberLine`, don't forget to go back to the terminal window and `Press Ctrl+C`
 
 ## Use Example:
 
 Once you are looking at `notebook1.jl` via `Pluto` in your web-browser, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like this:
 
-[<img src="https://github.com/gaelforget/TheNumberLine.jl/blob/master/docs/png/add.png" width="40%">]()
+[![add](https://github.com/gaelforget/TheNumberLine.jl/raw/master/docs/png/add.png)]()
 
 To go back to the starting point, hit `reset the number line` and you should now see:
 
-[<img src="https://github.com/gaelforget/TheNumberLine.jl/blob/master/docs/png/reset.png" width="30%">]() 
+[![reset](https://github.com/gaelforget/TheNumberLine.jl/raw/master/docs/png/reset.png)]()
 
+## API guide
+
+```@index
+```
+
+```@autodocs
+Modules = [TheNumberLine]
+```
 
