@@ -1,6 +1,8 @@
 module TheNumberLine
 
-export 	markers, arrows, NumberLinePlot, NumberLineExpression
+export 	markers, arrows, NumberLinePlot, NumberLineExpression, aSlider
+
+##
 
 """
     markers(x)
@@ -75,6 +77,40 @@ function NumberLineExpression(x)
 	end
 	"Expression : 0"*xpr
 end
+
+##
+
+import Base.show
+	
+struct aSlider
+    range::AbstractRange
+    default::Number
+    show_value::Bool
+end
+
+aSlider(range::AbstractRange; default=missing, show_value=true) = aSlider(range, (default === missing) ? first(range) : default, show_value)
+
+function show(io::IO, ::MIME"text/html", slider::aSlider)
+    print(io, """<input 
+        type="range" 
+        min="$(first(slider.range))" 
+        step="$(step(slider.range))" 
+        max="$(last(slider.range))" 
+        value="$(slider.default)"
+        $(slider.show_value ? "oninput=\"this.nextElementSibling.value=this.value\"" : "")
+        >""")
+    
+    print(io, "  [ x = </output>")
+
+    if slider.show_value
+        print(io, """<output>$(slider.default)</output>""")
+    end
+
+    print(io, " ] </output>")
+
+end
+
+##
 
 include("notebook1.jl")
 

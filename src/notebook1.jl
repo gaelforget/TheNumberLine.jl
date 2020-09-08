@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.11.12
+# v0.11.13
 
 using Markdown
 using InteractiveUtils
@@ -14,12 +14,15 @@ macro bind(def, element)
 end
 
 # ╔═╡ f07c3450-ef32-11ea-3f5f-2b0fc747ff80
-using Plots, TheNumberLine; "✓"
+using Plots, TheNumberLine, PlutoUI; "✓"
 
 # ╔═╡ 62e67a9c-ef25-11ea-3589-6f377d7aa788
 md"""
-`New Value = ` $(@bind b html"<input>")
-$(@bind c html"<input type=button value='add to number line'>")
+`Type value of x in text box : ` 
+
+` x = ` $(@bind b html"<input type=text>")
+
+` ` $(@bind c html"<input type=button value='add to number line'>")
 $(@bind d html"<input type=button value='reset number line'>")
 """
 
@@ -59,7 +62,7 @@ push!(jj,bb); "✓"
 
 # ╔═╡ Cell order:
 # ╟─62e67a9c-ef25-11ea-3589-6f377d7aa788
-# ╠═33165978-f050-11ea-33f0-4971b031ee8b
+# ╟─33165978-f050-11ea-33f0-4971b031ee8b
 # ╟─4be4ef1e-ef27-11ea-34f7-cd86ba1c36e2
 # ╟─f07c3450-ef32-11ea-3f5f-2b0fc747ff80
 # ╟─7c1434b2-ef25-11ea-0967-d756ec262715
