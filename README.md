@@ -33,6 +33,10 @@ Once you are looking at `notebook1.jl` via `Pluto.jl` in your web-browser, type 
 
 <img src="docs/png/reset.png" width="40%">  <img src="docs/png/add.png" width="40%">
 
+## Video Example:
+
+[<img src="https://user-images.githubusercontent.com/20276764/92967185-cf3d2380-f446-11ea-8230-9b1a4297edfb.png" width="40%">](https://youtu.be/uR87BlJo3IY)
+
 
 
 
