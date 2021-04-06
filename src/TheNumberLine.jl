@@ -51,35 +51,35 @@ end
 
 Display the number line sequence of operations, defined by vector `x`, as a graph.
 """    
-function NumberLinePlot(x)
-    nx=length(findall((!isnan).(x)))
-    xmul=50.0
-    ymul=1.0*(length(ii)+1)+5.0
-	!isa(xmul,TestType) ? xmul=parse(NumberLineType,xmul) : nothing
-	!isa(ymul,TestType) ? ymul=parse(NumberLineType,ymul) : nothing
+function NumberLinePlot(y)
+	x=y[findall((!isnan).(y))]
 	
-    nx>1 ? xx=xmul*cumsum([0 ;x[2:end]]) : xx=[0.;0.]
-    nx>1 ? yy=ymul*collect(0:length(x)-1) : yy=[0.;0.]
+    nx=length(x)
+    nx>1 ? xx=cumsum([0 ;x[2:end]]) : xx=[0.;0.]
+    nx>1 ? yy=collect(0:length(x)-1) : yy=[0.;0.]
 	
-    x∞=Int(max(1+maximum(abs.(extrema(xx))),10*xmul))
+    x∞=max(maximum(abs.(extrema(xx))),10)
     y∞=maximum(yy)
-	yy=y∞ .- yy
 	
+    xfac=min(x∞,10)/x∞
+    yfac=min(y∞+1,10)/(y∞+1)
+    f(p::Point) = Point(xfac*200.0*p[1],-yfac*100.0*p[2]+900.0)
+	g=10.0
+
 	@svg begin
-		setline(0.5)
-		line(Point(-x∞,y∞), Point(x∞,y∞), :stroke)
-		[line(Point(i,y∞+ymul), Point(i,y∞-ymul), :stroke) for i in -x∞:xmul:x∞]
-		setline(1.5)
-		[line(Point(xx[i],yy[i]),Point(xx[i],yy[i+1]),:stroke) for i in 1:nx-1]
-  		[line(Point(xx[i],yy[i+1]),Point(xx[i+1],yy[i+1]),:stroke) for i in 1:nx-1]
-		setline(1.5)
+		setline(0.5g)
+		line(f(Point(-x∞,0)), f(Point(x∞,0)), :stroke)
+		[line(f(Point(i,+1)), f(Point(i,-1)), :stroke) for i in -x∞:x∞]
+		setline(1.5g)
+		[line(f(Point(xx[i],yy[i])), f(Point(xx[i],yy[i+1])),:stroke) for i in 1:nx-1]
+  		[line(f(Point(xx[i],yy[i+1])), f(Point(xx[i+1],yy[i+1])),:stroke) for i in 1:nx-1]
+		setline(1.5g)
 	    setcolor(1,0,0)
-		line(Point(xx[end],yy[end]),Point(xx[end],yy[1]),:stroke)
+		line(f(Point(xx[end],yy[end])), f(Point(xx[end],yy[1])),:stroke)
 
 #    m,o,c=markers(x)
 #    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
-	end 2000 100
-	
+	end 5000 2000 joinpath(tempdir(),"tmp.svg")
 end
 
 """
