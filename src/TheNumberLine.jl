@@ -63,26 +63,34 @@ function NumberLinePlot(y)
 	
     xfac=min(x∞,10)/x∞
     yfac=min(y∞+1,10)/(y∞+1)
-    f(p::Point) = Point(xfac*200.0*p[1],-yfac*100.0*p[2]+900.0)
+    f(p::Point) = Point(xfac*200.0*p[1],-yfac*100.0*p[2]+800.0)
 	g=10.0
+    xdel=Int(ceil(x∞/10))
 
 	@svg begin
 		setline(0.5g)
 		line(f(Point(-x∞,0)), f(Point(x∞,0)), :stroke)
-		[line(f(Point(i,+1)), f(Point(i,-1)), :stroke) for i in -x∞:x∞]
+		[line(f(Point(i,+0.5)), f(Point(i,-0.5)), :stroke) for i in -x∞:x∞]
+        
+        [settext("<span font='80' foreground='red'> -$i </span>",f(Point(-i,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0) for i in xdel:xdel:Int(x∞)]
+        settext("<span font='80' foreground='white' background='green'> 0 </span>",f(Point(0,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0)
+        [settext("<span font='80' foreground='black'> +$i </span>",f(Point(i,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0) for i in xdel:xdel:Int(x∞)]
+
 		setline(1.5g)
 		[line(f(Point(xx[i],yy[i])), f(Point(xx[i],yy[i+1])),:stroke) for i in 1:nx-1]
   		[line(f(Point(xx[i],yy[i+1])), f(Point(xx[i+1],yy[i+1])),:stroke) for i in 1:nx-1]
+
 		setline(1.5g)
-	    setcolor(1,0,0)
+	    setcolor(0,0.75,0)
 		#line(f(Point(xx[end],yy[end])), f(Point(xx[end],yy[1])),:stroke)
         a=f(Point(xx[end],yy[end]))
         b=f(Point(xx[end],yy[1]))
         yy[end]!==yy[1] ? arrow(a,b,arrowheadlength=5.0g, arrowheadangle=pi/4, linewidth=1.5g) : nothing
 
-#    m,o,c=markers(x)
-#    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
-	end 5000 2000 joinpath(tempdir(),"tmp.svg")
+    end 5000 2000 joinpath(tempdir(),"tmp.svg")
 end
 
 """
