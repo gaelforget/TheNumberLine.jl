@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.11.14
+# v0.14.0
 
 using Markdown
 using InteractiveUtils
@@ -14,7 +14,11 @@ macro bind(def, element)
 end
 
 # ╔═╡ f07c3450-ef32-11ea-3f5f-2b0fc747ff80
-using Plots, TheNumberLine, PlutoUI; "✓"
+begin
+	TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
+	#TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"	
+	using TheNumberLine, PlutoUI, Luxor; "✓"
+end
 
 # ╔═╡ 62e67a9c-ef25-11ea-3589-6f377d7aa788
 md"""
@@ -25,6 +29,15 @@ md"""
 ` ` $(@bind c html"<input type=button value='add to number line'>")
 $(@bind d html"<input type=button value='reset number line'>")
 """
+
+# ╔═╡ 7c1434b2-ef25-11ea-0967-d756ec262715
+bb = try
+	isa(b,String) ? b1=eval(Meta.parse(b)) : b1=deepcopy(b)
+	!isa(b1,TestType) ? b2=parse(NumberLineType,b1) : b2=b1
+	b2
+  catch
+    NaN
+end; "✓"
 
 # ╔═╡ 46c870e8-ef2a-11ea-3552-afbc18d117ee
 begin
@@ -37,12 +50,16 @@ end; "✓"
 begin
 	c
 	length(jj)>0 ? push!(ii,jj[end]) : nothing
-	smry=NumberLineExpression(ii)
-	NumberLinePlot(ii)
+	kk=findall((!isnan).(ii))
+	smry=NumberLineExpression(ii[kk])
+	NumberLinePlot(ii[kk])
 end
 
 # ╔═╡ 33165978-f050-11ea-33f0-4971b031ee8b
 smry
+
+# ╔═╡ c0e46264-ef30-11ea-0b51-adc95104e22f
+push!(jj,bb); "✓"
 
 # ╔═╡ 78c0fd44-f052-11ea-0264-4378e02814af
 #`Select value of x from the list : `
@@ -52,19 +69,9 @@ smry
 #` ` $(@bind b aSlider(-10:10; default=0))
 
 #TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
-TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"	
+#TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"	
 
-# ╔═╡ 7c1434b2-ef25-11ea-0967-d756ec262715
-bb = try
-	isa(b,String) ? b1=eval(Meta.parse(b)) : b1=deepcopy(b)
-	!isa(b1,TestType) ? b2=parse(NumberLineType,b1) : b2=b1
-	b2
-  catch
-    NaN
-end; "✓"
-
-# ╔═╡ c0e46264-ef30-11ea-0b51-adc95104e22f
-push!(jj,bb); "✓"
+"-"
 
 # ╔═╡ Cell order:
 # ╟─62e67a9c-ef25-11ea-3589-6f377d7aa788

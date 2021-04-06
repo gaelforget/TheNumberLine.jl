@@ -1,6 +1,9 @@
 module TheNumberLine
 
-export 	NumberLinePlot, NumberLineExpression, aSlider, markers, arrows
+using Luxor
+
+export NumberLinePlot, NumberLineExpression
+export aSlider, markers, arrows
 
 ##
 
@@ -49,32 +52,34 @@ end
 Display the number line sequence of operations, defined by vector `x`, as a graph.
 """    
 function NumberLinePlot(x)
-    nx=length(x)
-    mul=0.1
-    nx>1 ? xx=cumsum([0 ;x[2:end]]) : xx=[0.;0.]
-    nx>1 ? yy=mul*collect(0:length(x)-1) : yy=[0.;0.]
-    nx>1 ? ylims=mul.*(-1.,nx+1) : ylims=mul.*(-1.,nx)
-
-    x∞=Int(max(1+maximum(abs.(extrema(xx))),10))
+    nx=length(findall((!isnan).(x)))
+    xmul=50.0
+    ymul=1.0*(length(ii)+1)+5.0
+	!isa(xmul,TestType) ? xmul=parse(NumberLineType,xmul) : nothing
+	!isa(ymul,TestType) ? ymul=parse(NumberLineType,ymul) : nothing
+	
+    nx>1 ? xx=xmul*cumsum([0 ;x[2:end]]) : xx=[0.;0.]
+    nx>1 ? yy=ymul*collect(0:length(x)-1) : yy=[0.;0.]
+	
+    x∞=Int(max(1+maximum(abs.(extrema(xx))),10*xmul))
     y∞=maximum(yy)
-    ticks=collect(-x∞:x∞)
-    plt=plot(ticks,0*ticks,marker=:vline,leg=:none,markersize=16,xtick=[-x∞,x∞],c=:black,
-        showaxis=false,xlims=(-x∞-1,x∞+1),ylims=ylims,linewidth=4,grid=:none)
-    
-    annotate!(-x∞,-0.9*mul, Plots.text("$(-x∞)", 16, :black, :right))
-    annotate!(x∞,-0.9*mul, Plots.text("$(x∞)", 16, :black, :left))
-    
-    [plot!(plt,[xx[i];xx[i]],[yy[i];yy[i+1]],line=:dash,c=:black) for i in 1:nx-1]
-    [plot!(plt,[xx[i];xx[i+1]],[yy[i+1];yy[i+1]],linewidth=2,c=:black) for i in 1:nx-1]
-    plot!(plt,[xx[end];xx[end]],[yy[end];yy[1]],line=:dash,c=:red)
+	yy=y∞ .- yy
+	
+	@svg begin
+		setline(0.5)
+		line(Point(-x∞,y∞), Point(x∞,y∞), :stroke)
+		[line(Point(i,y∞+ymul), Point(i,y∞-ymul), :stroke) for i in -x∞:xmul:x∞]
+		setline(1.5)
+		[line(Point(xx[i],yy[i]),Point(xx[i],yy[i+1]),:stroke) for i in 1:nx-1]
+  		[line(Point(xx[i],yy[i+1]),Point(xx[i+1],yy[i+1]),:stroke) for i in 1:nx-1]
+		setline(1.5)
+	    setcolor(1,0,0)
+		line(Point(xx[end],yy[end]),Point(xx[end],yy[1]),:stroke)
 
-    m,o,c=markers(x)
-    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
-
-    #a,p=arrows(x)
-    #[annotate!(plt,xx[i],yy[i]+0.03*mul,Plots.text(a[i], 14, p[i])) for i in 1:nx]
-
-    plt
+#    m,o,c=markers(x)
+#    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
+	end 2000 100
+	
 end
 
 """
@@ -85,7 +90,7 @@ Display the number line sequence of operations, defined by vector `x`, as text.
 function NumberLineExpression(x)
 	tmp1=deepcopy(x)
 	xpr=""
-	while length(tmp1)>1
+	while length(tmp1)>1&&!isnan(tmp1[2])
 		tmp2=NumberLineType(pop!(tmp1))
 		tmp2<0 ? xpr="$(tmp2)"*xpr : xpr="+$(tmp2)"*xpr
 	end
