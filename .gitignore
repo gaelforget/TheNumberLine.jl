@@ -3,6 +3,7 @@
 *.jl.mem
 .DS_Store
 */.DS_Store
+devel
 /Manifest.toml
 /docs/Manifest.toml
 /test/Manifest.toml

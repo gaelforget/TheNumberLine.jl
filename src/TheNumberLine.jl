@@ -75,7 +75,10 @@ function NumberLinePlot(y)
   		[line(f(Point(xx[i],yy[i+1])), f(Point(xx[i+1],yy[i+1])),:stroke) for i in 1:nx-1]
 		setline(1.5g)
 	    setcolor(1,0,0)
-		line(f(Point(xx[end],yy[end])), f(Point(xx[end],yy[1])),:stroke)
+		#line(f(Point(xx[end],yy[end])), f(Point(xx[end],yy[1])),:stroke)
+        a=f(Point(xx[end],yy[end]))
+        b=f(Point(xx[end],yy[1]))
+        yy[end]!==yy[1] ? arrow(a,b,arrowheadlength=5.0g, arrowheadangle=pi/4, linewidth=1.5g) : nothing
 
 #    m,o,c=markers(x)
 #    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]

@@ -50,6 +50,7 @@ end; "✓"
 begin
 	c
 	length(jj)>0 ? push!(ii,jj[end]) : nothing
+	#ii[:].=rand((-1,1),length(ii))
 	kk=findall((!isnan).(ii))
 	smry=NumberLineExpression(ii[kk])
 	NumberLinePlot(ii[kk])
