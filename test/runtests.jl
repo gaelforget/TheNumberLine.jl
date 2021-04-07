@@ -7,5 +7,5 @@ using Pluto
     include("../src/notebook1.jl")
     push!(ii,-2.0)
     plt=NumberLinePlot(ii)
-    @test NumberLineExpression(ii)=="Expression : 0-2"
+    @test NumberLineExpression(ii)=="Expression : 0-2.0"
 end
