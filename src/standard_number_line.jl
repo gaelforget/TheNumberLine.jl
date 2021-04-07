@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.21
+# v0.14.0
 
 using Markdown
 using InteractiveUtils
@@ -27,7 +27,7 @@ Type value and select `add`
 ` ` $(@bind c html"<input type=button value='add'>")
 $(@bind d html"<input type=button value='start over'>")
 
-_For example, `8`, `-9.0`, or `+2` should be valid choices. But you can also `start over` if it looks like something went wrong._
+_For example, `8`, `-9`, or `+2` should be valid choices. You can also `start over` if it looks like something went wrong._
 """
 
 # ╔═╡ dcddc9f9-36aa-44ce-b2c5-284af9928680
