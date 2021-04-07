@@ -1,6 +1,9 @@
 module TheNumberLine
 
-export 	NumberLinePlot, NumberLineExpression, aSlider, markers, arrows
+using Luxor
+
+export NumberLinePlot, NumberLineExpression
+export aSlider, markers, arrows
 
 ##
 
@@ -48,33 +51,46 @@ end
 
 Display the number line sequence of operations, defined by vector `x`, as a graph.
 """    
-function NumberLinePlot(x)
+function NumberLinePlot(y)
+	x=y[findall((!isnan).(y))]
+	
     nx=length(x)
-    mul=0.1
     nx>1 ? xx=cumsum([0 ;x[2:end]]) : xx=[0.;0.]
-    nx>1 ? yy=mul*collect(0:length(x)-1) : yy=[0.;0.]
-    nx>1 ? ylims=mul.*(-1.,nx+1) : ylims=mul.*(-1.,nx)
-
-    x∞=Int(max(1+maximum(abs.(extrema(xx))),10))
+    nx>1 ? yy=collect(0:length(x)-1) : yy=[0.;0.]
+	
+    x∞=max(maximum(abs.(extrema(xx))),10)
     y∞=maximum(yy)
-    ticks=collect(-x∞:x∞)
-    plt=plot(ticks,0*ticks,marker=:vline,leg=:none,markersize=16,xtick=[-x∞,x∞],c=:black,
-        showaxis=false,xlims=(-x∞-1,x∞+1),ylims=ylims,linewidth=4,grid=:none)
-    
-    annotate!(-x∞,-0.9*mul, Plots.text("$(-x∞)", 16, :black, :right))
-    annotate!(x∞,-0.9*mul, Plots.text("$(x∞)", 16, :black, :left))
-    
-    [plot!(plt,[xx[i];xx[i]],[yy[i];yy[i+1]],line=:dash,c=:black) for i in 1:nx-1]
-    [plot!(plt,[xx[i];xx[i+1]],[yy[i+1];yy[i+1]],linewidth=2,c=:black) for i in 1:nx-1]
-    plot!(plt,[xx[end];xx[end]],[yy[end];yy[1]],line=:dash,c=:red)
+	
+    xfac=min(x∞,10)/x∞
+    yfac=min(y∞+1,10)/(y∞+1)
+    f(p::Point) = Point(xfac*200.0*p[1],-yfac*100.0*p[2]+800.0)
+	g=10.0
+    xdel=Int(ceil(x∞/10))
 
-    m,o,c=markers(x)
-    [scatter!(plt,[xx[i]+o[i]],[yy[i]],marker=m[i],color=c[i],markersize=16) for i in 1:nx]
+	@svg begin
+		setline(0.5g)
+		line(f(Point(-x∞,0)), f(Point(x∞,0)), :stroke)
+		[line(f(Point(i,+0.5)), f(Point(i,-0.5)), :stroke) for i in -x∞:x∞]
+        
+        [settext("<span font='80' foreground='red'> -$i </span>",f(Point(-i,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0) for i in xdel:xdel:Int(x∞)]
+        settext("<span font='80' foreground='white' background='green'> 0 </span>",f(Point(0,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0)
+        [settext("<span font='80' foreground='black'> +$i </span>",f(Point(i,-2.0)),
+        halign="center",valign="bottom",markup=true,angle=0) for i in xdel:xdel:Int(x∞)]
 
-    #a,p=arrows(x)
-    #[annotate!(plt,xx[i],yy[i]+0.03*mul,Plots.text(a[i], 14, p[i])) for i in 1:nx]
+		setline(1.5g)
+		[line(f(Point(xx[i],yy[i])), f(Point(xx[i],yy[i+1])),:stroke) for i in 1:nx-1]
+  		[line(f(Point(xx[i],yy[i+1])), f(Point(xx[i+1],yy[i+1])),:stroke) for i in 1:nx-1]
 
-    plt
+		setline(1.5g)
+	    setcolor(0,0.75,0)
+		#line(f(Point(xx[end],yy[end])), f(Point(xx[end],yy[1])),:stroke)
+        a=f(Point(xx[end],yy[end]))
+        b=f(Point(xx[end],yy[1]))
+        yy[end]!==yy[1] ? arrow(a,b,arrowheadlength=5.0g, arrowheadangle=pi/4, linewidth=1.5g) : nothing
+
+    end 5000 2000 joinpath(tempdir(),"tmp.svg")
 end
 
 """
@@ -85,7 +101,7 @@ Display the number line sequence of operations, defined by vector `x`, as text.
 function NumberLineExpression(x)
 	tmp1=deepcopy(x)
 	xpr=""
-	while length(tmp1)>1
+	while length(tmp1)>1&&!isnan(tmp1[2])
 		tmp2=NumberLineType(pop!(tmp1))
 		tmp2<0 ? xpr="$(tmp2)"*xpr : xpr="+$(tmp2)"*xpr
 	end
