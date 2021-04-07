@@ -2,7 +2,7 @@
 CurrentModule = TheNumberLine
 ```
 
-# TheNumberLine
+# TheNumberLine.jl
 
 The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
 
@@ -12,26 +12,30 @@ _This package is in early development stage when breaking changes are to be expe
 
 [![DOI](https://zenodo.org/badge/293410387.svg)](https://zenodo.org/badge/latestdoi/293410387)
 
-## Instructions
+## How-To
 
-1. Download <https://github.com/gaelforget/TheNumberLine.jl>
-2. Open a terminal window & enter `TheNumberLine.jl/` folder
-3. Run `julia --project=./ src/run.jl`
-4. Proceed as prompted in the terminal to open `notebook1.jl` via `Pluto.jl`
+To get started:
+
+1. Download [TheNumberLine.jl](https://github.com/gaelforget/TheNumberLine.jl)
+2. Open a terminal window & enter the folder called `TheNumberLine.jl/`
+3. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) e.g. via `julia --project=./ test/runPluto.jl`
+4. In the web browser window, open `src/standard_number_line.jl`
 
 _Tips:_
 
-- the instructions prompted in the terminal will let you use `TheNumberLine` in your web browser as a [Pluto notebook](https://github.com/fonsp/Pluto.jl) called `notebook1.jl`
-- first time using `TheNumberLine.jl`? you may need, but only once as a pre-requisite, to download [Julia itself](https://docs.julialang.org/en/v1/) and then add `TheNumberLine.jl` and `Pluto.jl` via the [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/)
-- to close the program / close `TheNumberLine.jl` off, you want to go back to the terminal window and `Press Ctrl+C`
+- if it's your first time using `TheNumberLine.jl` then you may need (once as a pre-requisite) to download [Julia itself](https://docs.julialang.org/en/v1/) and add packages (e.g. `using Pkg; Pkg.add("TheNumberLine")`; see [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/))
+- to close the session you want to go back to the terminal window and `Press Ctrl+C`
 
-## Use Example
+## Use Example:
 
-Once you are looking at `notebook1.jl` via `Pluto.jl` in your web-browser, type a number of your choice in the text box and hit `add to number line`. Repeat a few times, e.g. with other numbers, to obtain something like the graph shown on the right hand side. To go back to the starting point, hit `reset the number line` (left hand sode graph).
+Once you are looking at `standard_number_line.jl` via `Pluto.jl` in your web-browser (left image below), type a number of your choice in the text box and hit `add`.
 
-Reset           |  Add
+Repeat a few times, e.g. with other numbers, to obtain something like the image shown below on the right hand side. You can also hit `start over` at any point.
+
+
+Start           |  Add
 :--------------:|:--------------:
-![reset](https://github.com/gaelforget/TheNumberLine.jl/raw/master/docs/png/reset.png) | ![reset](https://github.com/gaelforget/TheNumberLine.jl/raw/master/docs/png/add.png)
+![reset](https://user-images.githubusercontent.com/20276764/113902244-acd17580-979d-11eb-8159-92b45bea38bb.png) | ![reset](https://user-images.githubusercontent.com/20276764/113902286-b529b080-979d-11eb-93b2-50a6174517ec.png)
 
 ## Main Functions
 
