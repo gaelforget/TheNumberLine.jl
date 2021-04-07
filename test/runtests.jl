@@ -1,6 +1,6 @@
 using TheNumberLine
 using Test
-using Plots
+using Luxor
 using Pluto
 
 @testset "TheNumberLine.jl" begin
