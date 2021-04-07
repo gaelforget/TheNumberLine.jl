@@ -14,20 +14,6 @@ _This package is in early development stage when breaking changes are to be expe
 
 [![DOI](https://zenodo.org/badge/293410387.svg)](https://zenodo.org/badge/latestdoi/293410387)
 
-## How-To
-
-To get started:
-
-1. Download [TheNumberLine.jl](https://github.com/gaelforget/TheNumberLine.jl)
-2. Open a terminal window & enter the folder called `TheNumberLine.jl/`
-3. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) e.g. via `julia --project=./ test/runPluto.jl`
-4. In the web browser window, open `src/standard_number_line.jl`
-
-_Tips:_
-
-- if it's your first time using `TheNumberLine.jl` then you may need (once as a pre-requisite) to download [Julia itself](https://docs.julialang.org/en/v1/) and add packages (e.g. `using Pkg; Pkg.add("TheNumberLine")`; see [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/))
-- to close the session you want to go back to the terminal window and `Press Ctrl+C`
-
 ## Use Example:
 
 Once you are looking at `standard_number_line.jl` via `Pluto.jl` in your web-browser (left image below), type a number of your choice in the text box and hit `add`.
