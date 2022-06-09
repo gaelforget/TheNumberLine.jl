@@ -41,35 +41,7 @@ Start           |  Add
 
 ## Exercises
 
-### 1. 
-
-In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider instead by replacing the `...@bind b htm...` line with:
-
-```
-`Select value of x from the list : `
-` ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
-```
-
-or
-
-```
-`Choose value of x using slider : `
-` ` $(@bind b aSlider(-10:10; default=0))
-```
-
-### 2. 
-
-To restrict the number line to using integers (as opposed to reals), try changing `TestType` in `standard_number_line.jl`.
-
-```@example
-TestType=Number; NumberLineType=Float64
-"Number LineType = $(NumberLineType)"
-
-#TestType=Int; NumberLineType=Int
-#"NumberLineType = $(NumberLineType)"
-```
-	
-### 3.
+### 1. Random Turtle
 
 In the `random turtle` activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
 
@@ -81,6 +53,44 @@ NumberLinePlot(rand((-1,1),10))
 
 The activity basically is _do this a bunch of times and discuss how results can vary_
 .
+
+### 1. Use a Slider
+
+In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider or multiple choice instead.
+
+To do this, replace the line that says
+
+```
+` Type value : ` $(@bind b html"<input type=text>")
+```
+
+with
+
+```
+`Select value of x from the list : ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
+```
+
+or
+
+```
+`Choose value of x using slider : ` $(@bind b aSlider(-10:10; default=0))
+```
+
+### 1. Integers Only
+
+To restrict the number line to using integers (as opposed to reals), try changing `TestType` in `standard_number_line.jl`.
+
+To do this, replace the line that says
+
+```
+TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
+```
+
+with 
+
+```
+TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
+```
 
 ## Main Functions
 
