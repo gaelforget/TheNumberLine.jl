@@ -32,6 +32,9 @@ $(@bind d html"<input type=button value='start over'>")
 _For example, `8`, `-9`, or `+2` should be valid choices. You can also `start over` if it looks like something went wrong._
 """
 
+# ╔═╡ 5c14db5e-2777-4e14-8b24-2172b7171c67
+md"""## Appendix"""
+
 # ╔═╡ dcddc9f9-36aa-44ce-b2c5-284af9928680
 #The Number Line is a common teaching tool in e.g. K-12 math classes accross the U.S.
 #
@@ -47,13 +50,11 @@ begin
 	#1. In the code cell at the top where values are entered, you can use 
 	# a list of a slider instead. Try replacing the _...@bind b htm..._ line with:
 	#
-	#`Select value of x from the list : `
-	#` ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
+	#`Select value of x from the list : ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
 	#
 	#or
 	#
-	#`Choose value of x using slider : `
-	#` ` $(@bind b aSlider(-10:10; default=0))
+	#`Choose value of x using slider : ` $(@bind b aSlider(-10:10; default=0))
 	
 	#2. To restrict the number line to Integer inputs try changing the `TestType` below.
 	#	
@@ -828,6 +829,7 @@ version = "3.5.0+0"
 # ╟─62e67a9c-ef25-11ea-3589-6f377d7aa788
 # ╟─33165978-f050-11ea-33f0-4971b031ee8b
 # ╟─4be4ef1e-ef27-11ea-34f7-cd86ba1c36e2
+# ╟─5c14db5e-2777-4e14-8b24-2172b7171c67
 # ╟─dcddc9f9-36aa-44ce-b2c5-284af9928680
 # ╟─78c0fd44-f052-11ea-0264-4378e02814af
 # ╟─f07c3450-ef32-11ea-3f5f-2b0fc747ff80
