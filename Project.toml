@@ -12,6 +12,6 @@ PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 
 [compat]
 Luxor = "2.10"
-Pluto = "0.11, 0.12, 0.13, 0.14"
+Pluto = "0.11, 0.12, 0.13, 0.14, 0.19"
 PlutoUI = "0.6, 0.7"
 julia = "1"
