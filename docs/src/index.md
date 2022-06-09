@@ -25,7 +25,7 @@ _This package is in early development stage when breaking changes are to be expe
 
 ## Use Example
 
-Once you are looking at [standard\_number\_line.jl](standard_number_line.html) via [Pluto.jl](https://juliaclimate.github.io/Notebooks/#directions) in your web-browser:
+Once you are looking at [standard\_number\_line.jl](standard_number_line.html) via [Pluto.jl](https://juliaclimate.github.io/Notebooks/#directions) in your web-browser (see [User Directions](@ref) for detail) :
 
 - type a number in the text box
 - click on the `add` button
@@ -54,7 +54,7 @@ NumberLinePlot(rand((-1,1),10))
 The activity basically is _do this a bunch of times and discuss how results can vary_
 .
 
-### 1. Use a Slider
+### 2. Use a Slider
 
 In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider or multiple choice instead.
 
@@ -76,7 +76,7 @@ or
 `Choose value of x using slider : ` $(@bind b aSlider(-10:10; default=0))
 ```
 
-### 1. Integers Only
+### 3. Integers Only
 
 To restrict the number line to using integers (as opposed to reals), try changing `TestType` in `standard_number_line.jl`.
 
@@ -99,15 +99,16 @@ NumberLinePlot
 NumberLineExpression
 ```
 
-## Get Started
+## User Directions
 
 1. Download [TheNumberLine.jl](https://github.com/gaelforget/TheNumberLine.jl)
-2. Open a terminal window & enter the folder called `TheNumberLine.jl/`
-3. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) e.g. via `julia --project=./ test/runPluto.jl`
-4. In the web browser window, open `src/standard_number_line.jl`
+2. Open a terminal window go to the `TheNumberLine.jl/src/` folder
+3. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) e.g. via `julia -e "using Pluto; Pluto.run()"`
+4. In web browser window, select and open `standard_number_line.jl`
 
 !!! tip
     A couple tips below.
 
-- if it's your first time using `TheNumberLine.jl` then you may need (once as a pre-requisite) to download [Julia itself](https://docs.julialang.org/en/v1/) and add packages (e.g. `using Pkg; Pkg.add("TheNumberLine")`; see [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/))
+- You can try `TheNumberLine.jl` in the cloud, without having to install anything, for example on [this binder](https://gesis.mybinder.org/v2/gh/JuliaClimate/Notebooks/HEAD?urlpath=lab).
+- To use `TheNumberLine.jl` on your own computer, you'll need to download [Julia itself](https://docs.julialang.org/en/v1/) beforehand.
 - to close the session you want to go back to the terminal window and `Press Ctrl+C`
