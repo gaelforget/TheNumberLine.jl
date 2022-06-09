@@ -24,6 +24,10 @@ for i in lst
     cp(fil_in,fil_out[1:end-4]*"jl")
 end
 
+fil_in=joinpath(tempdir(),"tmp.svg")
+fil_out=joinpath(@__DIR__,"build","tmp.svg")
+isfile(fil_in) ? mv(fil_in,fil_out) : nothing
+
 deploydocs(;
     repo="github.com/gaelforget/TheNumberLine.jl",
 )

@@ -1,5 +1,16 @@
 ```@meta
 CurrentModule = TheNumberLine
+
+using PlutoUI # hide
+
+macro bind(def, element) # hide
+    quote
+        local iv = try Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value catch; b -> missing; end
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : iv(el)
+        el
+    end
+end
 ```
 
 # TheNumberLine.jl
@@ -32,36 +43,41 @@ Start           |  Add
 
 ### 1. 
 
-In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider instead by replacing the _...@bind b htm..._ line with:
+In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider instead by replacing the `...@bind b htm...` line with:
 
-```@docs
+```
 `Select value of x from the list : `
 ` ` $(@bind b Select(["4","3","2","1","0","-1","-2","-3","-4"],default="0"))
 ```
 
 or
 
-```@docs
+```
 `Choose value of x using slider : `
 ` ` $(@bind b aSlider(-10:10; default=0))
 ```
-	
+
 ### 2. 
 
 To restrict the number line to using integers (as opposed to reals), try changing `TestType` in `standard_number_line.jl`.
 
-```@docs
-TestType=Number; NumberLineType=Float64; "Number LineType = $(NumberLineType)"
-#TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
+```@example
+TestType=Number; NumberLineType=Float64
+"Number LineType = $(NumberLineType)"
+
+#TestType=Int; NumberLineType=Int
+#"NumberLineType = $(NumberLineType)"
 ```
 	
 ### 3.
 
-In the _random turtle_ activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
+In the `random turtle` activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
 
 ```
 NumberLinePlot(rand((-1,1),10))
 ```
+
+![](tmp.svg)
 
 The activity basically is _do this a bunch of times and discuss how results can vary_
 .
@@ -81,6 +97,7 @@ NumberLineExpression
 4. In the web browser window, open `src/standard_number_line.jl`
 
 !!! tip
+    A couple tips below.
 
 - if it's your first time using `TheNumberLine.jl` then you may need (once as a pre-requisite) to download [Julia itself](https://docs.julialang.org/en/v1/) and add packages (e.g. `using Pkg; Pkg.add("TheNumberLine")`; see [package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/))
 - to close the session you want to go back to the terminal window and `Press Ctrl+C`

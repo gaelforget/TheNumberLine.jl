@@ -42,7 +42,7 @@ end
 
 Display the number line sequence of operations, defined by vector `x`, as a graph.
 """    
-function NumberLinePlot(y)
+function NumberLinePlot(y; path=tempdir())
 	x=y[findall((!isnan).(y))]
 	
     nx=length(x)
@@ -81,7 +81,7 @@ function NumberLinePlot(y)
         b=f(Point(xx[end],yy[1]))
         yy[end]!==yy[1] ? arrow(a,b,arrowheadlength=5.0g, arrowheadangle=pi/4, linewidth=1.5g) : nothing
 
-    end 5000 2000 joinpath(tempdir(),"tmp.svg")
+    end 5000 2000 joinpath(path,"tmp.svg")
 end
 
 """

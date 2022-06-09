@@ -1,6 +1,6 @@
 # TheNumberLine
 
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://gaelforget.github.io/TheNumberLine.jl/dev)
+[![Dev](https://img.shields.io/badge/documentation-blue.svg)](https://gaelforget.github.io/TheNumberLine.jl/dev)
 
 The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
 
