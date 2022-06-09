@@ -1,10 +1,6 @@
 # TheNumberLine
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://gaelforget.github.io/TheNumberLine.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://gaelforget.github.io/TheNumberLine.jl/dev)
-[![Build Status](https://travis-ci.org/gaelforget/TheNumberLine.jl.svg?branch=master)](https://travis-ci.org/gaelforget/TheNumberLine.jl)
-[![Coverage](https://codecov.io/gh/gaelforget/TheNumberLine.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/gaelforget/TheNumberLine.jl)
-[![Coverage](https://coveralls.io/repos/github/gaelforget/TheNumberLine.jl/badge.svg?branch=master)](https://coveralls.io/github/gaelforget/TheNumberLine.jl?branch=master)
 
 The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
 
@@ -13,6 +9,8 @@ _This package is in early development stage when breaking changes are to be expe
 **Authors:** Gael Forget and Jane Chapin
 
 [![DOI](https://zenodo.org/badge/293410387.svg)](https://zenodo.org/badge/latestdoi/293410387)
+[![Build Status](https://travis-ci.org/gaelforget/TheNumberLine.jl.svg?branch=master)](https://travis-ci.org/gaelforget/TheNumberLine.jl)
+[![Coverage](https://codecov.io/gh/gaelforget/TheNumberLine.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/gaelforget/TheNumberLine.jl)
 
 ## Use Example:
 
