@@ -1,7 +1,7 @@
 ```@meta
 CurrentModule = TheNumberLine
 
-using PlutoUI # hide
+using PlutoUI
 
 macro bind(def, element) # hide
     quote
@@ -91,6 +91,18 @@ with
 ```
 TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
 ```
+
+## Exercises
+
+```@example
+#using TheNumberLine
+import TheNumberLine.histogram_template: make_hist, save_hist
+
+fig=make_hist()
+save_hist(fig,file="hist.png")
+```
+
+![](hist.png)
 
 ## Main Functions
 
