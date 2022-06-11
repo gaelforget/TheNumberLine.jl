@@ -4,14 +4,10 @@ module histogram_template
 using CairoMakie
 
 """
-    make_hist()
+    make_hist(;max_value=5.0,max_count=5,aspect_ratio=2.0)
 
 ```
-using TheNumberLine
-import TheNumberLine.histogram_template: make_hist, save_hist
-
 fig=make_hist()
-save_hist(fig)
 ```
 """
 function make_hist(;max_value=5.0,max_count=5,aspect_ratio=2.0)
@@ -24,6 +20,13 @@ function make_hist(;max_value=5.0,max_count=5,aspect_ratio=2.0)
         f
 end
 
+"""
+    save_hist(fig::Makie.Figure;file=joinpath(tempdir(),"histogram_template.png"))
+
+```
+save_hist(make_hist())
+```
+"""
 function save_hist(fig::Makie.Figure;file=joinpath(tempdir(),"histogram_template.png")) 
         save(file,fig) 
         file

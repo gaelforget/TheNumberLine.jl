@@ -12,6 +12,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Docs" => "functions.md",
     ],
 )
 
