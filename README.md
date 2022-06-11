@@ -30,7 +30,7 @@ Repeat a few times, e.g. with other numbers, to obtain something like the image 
   
  ## Video Example:
 
-<Use Example>
+<details>
  <summaryClick me! ></summary>
 <p>
 
