@@ -21,10 +21,24 @@ The **Number Line** is a common teaching tool in e.g. K-12 math classes accross 
 
 [![DOI](https://zenodo.org/badge/293410387.svg)](https://zenodo.org/badge/latestdoi/293410387)
 
-!!! warning
-    This package is in early development stage when breaking changes are to be expected.
+## Exercises
 
-## Use Example
+### `Random Turtle`
+
+In the `random turtle` activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
+
+```@example
+import TheNumberLine: NumberLinePlot # hide
+NumberLinePlot(rand((-1,1),10),path=".",filename="RandomTurtle.png")
+nothing # hide
+```
+
+![](RandomTurtle.png)
+
+The activity basically is _do this a bunch of times and discuss how results can vary_
+.
+
+### `Interactive Use`
 
 In your web-browser (see [User Directions](@ref) for detail) :
 
@@ -32,39 +46,18 @@ In your web-browser (see [User Directions](@ref) for detail) :
 - click on the `add` button
 - repeat or reset
 
-Repeat a few times, e.g. with other numbers, to obtain something like the image shown below on the right hand side. You can also hit `start over` at any point (left hand side image).
-
-
-Start           |  Add
-:--------------:|:--------------:
-![reset](https://user-images.githubusercontent.com/20276764/113902244-acd17580-979d-11eb-8159-92b45bea38bb.png) | ![reset](https://user-images.githubusercontent.com/20276764/113902286-b529b080-979d-11eb-93b2-50a6174517ec.png)
-
-
-## Exercises
-
-### Random Turtle
-
-In the `random turtle` activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
-
-```
-NumberLinePlot(rand((-1,1),10))
-```
-
-![](tmp.svg)
-
-The activity basically is _do this a bunch of times and discuss how results can vary_
-.
+Repeat a few times, e.g. with other numbers, to obtain something like the image shown above. You can also hit `start over` at any point.
 
 ### Histograms
 
 This module provides a simple way to create an empty histogram that students can print and write over.
 
 ```@example
-#using TheNumberLine
-import TheNumberLine.histogram_template: make_hist, save_hist
+import TheNumberLine.histogram_template: make_hist, save_hist # hide
 
 fig=make_hist()
 save_hist(fig,file="hist.png")
+nothing # hide
 ```
 
 ![](hist.png)

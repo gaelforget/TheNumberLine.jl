@@ -41,11 +41,11 @@ function arrows(x)
 end
 
 """
-    NumberLinePlot(x)
+    NumberLinePlot(y; path=tempdir(), filename="tmp.png")
 
-Display the number line sequence of operations, defined by vector `x`, as a graph.
+Display the number line sequence of operations, defined by vector `y`, as a graph.
 """    
-function NumberLinePlot(y; path=tempdir())
+function NumberLinePlot(y; path=tempdir(), filename="tmp.png")
 	x=y[findall((!isnan).(y))]
 	
     nx=length(x)
@@ -61,7 +61,7 @@ function NumberLinePlot(y; path=tempdir())
 	g=10.0
     xdel=Int(ceil(x∞/10))
 
-	@svg begin
+	@png begin
 		setline(0.5g)
 		line(f(Point(-x∞,0)), f(Point(x∞,0)), :stroke)
 		[line(f(Point(i,+0.5)), f(Point(i,-0.5)), :stroke) for i in -x∞:x∞]
@@ -84,7 +84,7 @@ function NumberLinePlot(y; path=tempdir())
         b=f(Point(xx[end],yy[1]))
         yy[end]!==yy[1] ? arrow(a,b,arrowheadlength=5.0g, arrowheadangle=pi/4, linewidth=1.5g) : nothing
 
-    end 5000 2000 joinpath(path,"tmp.svg")
+    end 5000 2000 joinpath(path,filename)
 end
 
 """
