@@ -17,11 +17,12 @@ end
 
 The **Number Line** is a common teaching tool in e.g. K-12 math classes accross the U.S.
 
-_This package is in early development stage when breaking changes are to be expected._
-
 **Authors:** Gael Forget and Jane Chapin
 
 [![DOI](https://zenodo.org/badge/293410387.svg)](https://zenodo.org/badge/latestdoi/293410387)
+
+!!! warning
+    This package is in early development stage when breaking changes are to be expected.
 
 ## Use Example
 
@@ -109,9 +110,16 @@ save_hist(fig,file="hist.png")
 ```@docs
 NumberLinePlot
 NumberLineExpression
+histogram_template.make_hist
 ```
 
 ## User Directions
+
+You can try `TheNumberLine.jl` in the cloud without having to install anything.
+
+[![Dev](https://img.shields.io/badge/open-cloud-blue.svg)](https://gesis.mybinder.org/v2/gh/JuliaClimate/Notebooks/HEAD?urlpath=lab)
+
+If instead you want to use `TheNumberLine.jl` then proceed as follows.
 
 1. Download [TheNumberLine.jl](https://github.com/gaelforget/TheNumberLine.jl)
 2. Open a terminal window go to the `TheNumberLine.jl/src/` folder
@@ -119,8 +127,7 @@ NumberLineExpression
 4. In web browser window, select and open `standard_number_line.jl`
 
 !!! tip
-    A couple tips below.
+    Some tips for new users are provided below.
 
-- You can try `TheNumberLine.jl` in the cloud, without having to install anything, for example on [this binder](https://gesis.mybinder.org/v2/gh/JuliaClimate/Notebooks/HEAD?urlpath=lab).
 - To use `TheNumberLine.jl` on your own computer, you'll need to download [Julia itself](https://docs.julialang.org/en/v1/) beforehand.
 - to close the session you want to go back to the terminal window and `Press Ctrl+C`
