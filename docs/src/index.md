@@ -26,7 +26,7 @@ The **Number Line** is a common teaching tool in e.g. K-12 math classes accross 
 
 ## Use Example
 
-Once you are looking at [standard\_number\_line.jl](standard_number_line.html) via [Pluto.jl](https://juliaclimate.github.io/Notebooks/#directions) in your web-browser (see [User Directions](@ref) for detail) :
+In your web-browser (see [User Directions](@ref) for detail) :
 
 - type a number in the text box
 - click on the `add` button
@@ -42,7 +42,7 @@ Start           |  Add
 
 ## Exercises
 
-### 1. Random Turtle
+### Random Turtle
 
 In the `random turtle` activity we take a series of N consecutive, random, steps on the number line. Each step is either `-1` (left) or `+1` (right) based on a coin flip. We do this N times in a row (10 times for example) and observe our final value at the end (green arrow). All you need to do this is copy the following line to a new code cell and run it:
 
@@ -55,7 +55,23 @@ NumberLinePlot(rand((-1,1),10))
 The activity basically is _do this a bunch of times and discuss how results can vary_
 .
 
-### 2. Use a Slider
+### Histograms
+
+This module provides a simple way to create an empty histogram that students can print and write over.
+
+```@example
+#using TheNumberLine
+import TheNumberLine.histogram_template: make_hist, save_hist
+
+fig=make_hist()
+save_hist(fig,file="hist.png")
+```
+
+![](hist.png)
+
+## Various
+
+### 1. Use a Slider
 
 In the first code cell of `standard_number_line.jl`, where values are entered, you can use a list of a slider or multiple choice instead.
 
@@ -77,7 +93,7 @@ or
 `Choose value of x using slider : ` $(@bind b aSlider(-10:10; default=0))
 ```
 
-### 3. Integers Only
+### 2. Integers Only
 
 To restrict the number line to using integers (as opposed to reals), try changing `TestType` in `standard_number_line.jl`.
 
@@ -92,18 +108,6 @@ with
 ```
 TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
 ```
-
-## Exercises
-
-```@example
-#using TheNumberLine
-import TheNumberLine.histogram_template: make_hist, save_hist
-
-fig=make_hist()
-save_hist(fig,file="hist.png")
-```
-
-![](hist.png)
 
 ## Main Functions
 
