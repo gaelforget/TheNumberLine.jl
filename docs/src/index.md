@@ -58,3 +58,13 @@ nothing # hide
 
 ![](hist.png)
 
+## Notebook Example
+
+- [standard\_number\_line.html](standard_number_line.html)
+- [standard\_number\_line.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/standard_number_line.jl)
+
+## School Day Table
+
+- [table_school_days.html](table_school_days.html)
+- [table_school_days.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/table_school_days.jl)
+
