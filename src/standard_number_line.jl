@@ -114,10 +114,6 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 Luxor = "ae8d54c2-7ccd-5906-9d76-62fc9837b5bc"
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 TheNumberLine = "d3dd9eff-7bfc-4540-8377-597257661861"
-
-[compat]
-PlutoUI = "~0.7.39"
-TheNumberLine = "~0.1.4"
 """
 
 # ╔═╡ 00000000-0000-0000-0000-000000000002
@@ -126,7 +122,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.10.3"
 manifest_format = "2.0"
-project_hash = "8820120b8193c69051ac5110961db695916fe17d"
+project_hash = "096621b198a71c0c491100f905ff517c5e8185ee"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
