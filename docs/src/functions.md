@@ -23,18 +23,21 @@ You can try `TheNumberLine.jl` in the cloud without having to install anything.
 
 ### 2. Private Computer
 
-If instead you want to use `TheNumberLine.jl` then proceed as follows.
+If instead you want to use `TheNumberLine.jl` then proceed as follows:
 
 1. Download [TheNumberLine.jl](https://github.com/gaelforget/TheNumberLine.jl)
-2. Open a terminal window go to the `TheNumberLine.jl/src/` folder
-3. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) e.g. via `julia -e "using Pluto; Pluto.run()"`
-4. In web browser window, select and open `standard_number_line.jl`
+2. Start [Pluto.jl](https://github.com/fonsp/Pluto.jl) in a terminal window
+
+`julia -e 'using Pluto; Pluto.run(notebook="TheNumberLine.jl/src/standard_number_line.jl")'` 
+
+The result should look as follows:
+
+- [standard\_number\_line.html](standard_number_line.html)
+- [standard\_number\_line.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/standard_number_line.jl)
 
 !!! tip
-    Some tips for new users are provided below.
-
-- To use `TheNumberLine.jl` on your own computer, you'll need to download [Julia itself](https://docs.julialang.org/en/v1/) beforehand.
-- to close the session you want to go back to the terminal window and `Press Ctrl+C`
+    - To use `TheNumberLine.jl` on your own computer, you'll need to download [Julia itself](https://docs.julialang.org/en/v1/) beforehand.
+    - to close the session you want to go back to the terminal window and `Press Ctrl+C`
 
 ## Main Functions
 
@@ -85,3 +88,11 @@ with
 TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
 ```
 
+## School Day Table
+
+- [table\_school\_days.html](table_school_days.html)
+- [table\_school\_days.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/table_school_days.jl)
+
+```@docs
+table_school_days
+```
