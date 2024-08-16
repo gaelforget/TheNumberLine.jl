@@ -28,6 +28,8 @@ end
 
 fil_school_days=table_school_days()
 mv(fil_school_days,joinpath(@__DIR__,"build", "table_school_days.html"))
+fil_school_days=table_school_days(file="table_school_days.csv")
+mv(fil_school_days,joinpath(@__DIR__,"build", "table_school_days.csv"))
 
 fil_in=joinpath(tempdir(),"tmp.svg")
 fil_out=joinpath(@__DIR__,"build","tmp.svg")

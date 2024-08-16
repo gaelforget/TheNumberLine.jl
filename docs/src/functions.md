@@ -32,7 +32,7 @@ If instead you want to use `TheNumberLine.jl` then proceed as follows:
 
 The result should look as follows:
 
-- [standard\_number\_line.html](standard_number_line.html)
+- [standard\_number\_line.html](../standard_number_line.html)
 - [standard\_number\_line.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/standard_number_line.jl)
 
 !!! tip
@@ -90,7 +90,7 @@ TestType=Int; NumberLineType=Int; "NumberLineType = $(NumberLineType)"
 
 ## School Day Table
 
-- [table\_school\_days.html](table_school_days.html)
+- [table\_school\_days.html](../table_school_days.html)
 - [table\_school\_days.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/table_school_days.jl)
 
 ```@docs
