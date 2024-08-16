@@ -65,6 +65,6 @@ nothing # hide
 
 ## School Day Table
 
-- [table_school_days.html](table_school_days.html)
-- [table_school_days.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/table_school_days.jl)
+- [table\_school\_days.html](table_school_days.html)
+- [table\_school\_days.jl](https://github.com/gaelforget/TheNumberLine.jl/blob/master/src/table_school_days.jl)
 
