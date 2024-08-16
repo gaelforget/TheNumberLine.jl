@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+</head>
+<body>
+<table>
+  <thead>
+    <tr class = "header headerLastRow">
+      <th style = "text-align: left;">date</th>
+      <th style = "text-align: left;">week day</th>
+      <th style = "text-align: center;">rotation day</th>
+      <th style = "text-align: center;">A block class</th>
+      <th style = "text-align: center;">B block class</th>
+      <th style = "text-align: center;">C block class</th>
+      <th style = "text-align: center;">D block class</th>
+      <th style = "text-align: center;">E block class</th>
+      <th style = "text-align: center;">F block class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style = "text-align: left;">2023-09-05</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-06</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-07</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-08</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-09-11</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-12</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-13</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-14</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-15</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-09-18</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-20</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-21</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-22</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-09-25</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-26</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-27</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-28</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-09-29</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-10-02</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-03</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-04</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-05</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-06</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-10-10</td>
+      <td style = "background: black; color: white; text-align: left;">, Tuesday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-11</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-12</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-13</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-10-16</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-17</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-18</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-19</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-20</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-10-23</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-24</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-25</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-26</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-27</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-10-30</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-10-31</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-01</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-02</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-03</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-11-06</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-08</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-09</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-11-13</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-14</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-15</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-16</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-17</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-11-20</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-21</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-22</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-11-27</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-28</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-29</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-11-30</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-01</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-12-04</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-05</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-06</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-07</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-08</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-12-11</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-12</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-13</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-14</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-15</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2023-12-18</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-19</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-20</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-21</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2023-12-22</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-01-02</td>
+      <td style = "background: black; color: white; text-align: left;">, Tuesday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-03</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-04</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-05</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-01-08</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-09</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-10</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-11</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-12</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-01-16</td>
+      <td style = "background: black; color: white; text-align: left;">, Tuesday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-17</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-18</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-19</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-01-22</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-23</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-24</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-25</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-26</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-01-29</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-30</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-01-31</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-01</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-02</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-02-05</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-06</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-07</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-08</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-09</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-02-12</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-13</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-14</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-15</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-16</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-02-26</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-27</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-28</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-02-29</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-01</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-03-04</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-05</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-06</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-07</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-08</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-03-11</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-12</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-13</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-14</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-15</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-03-18</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-19</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-20</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-21</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-22</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-03-25</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-26</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-27</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-28</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-03-29</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-04-01</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-02</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-03</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-04</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-05</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-04-08</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-09</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-10</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-11</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-12</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-04-22</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">D day</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-23</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-24</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-25</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-26</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-04-29</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-04-30</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-01</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-02</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-03</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-05-06</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-07</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-08</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-09</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-10</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-05-13</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-14</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-15</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-16</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-17</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-05-20</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">F day</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-21</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-22</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-23</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-24</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-05-28</td>
+      <td style = "background: black; color: white; text-align: left;">, Tuesday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-29</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-30</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-05-31</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-06-03</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">C day</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-04</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-05</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-06</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-07</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-06-10</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">B day</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-11</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-12</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">half day</td>
+      <td style = "background: white; color: orange; text-align: center;">half day</td>
+      <td style = "background: white; color: green; text-align: center;">half day</td>
+      <td style = "background: white; color: blue; text-align: center;">half day</td>
+      <td style = "background: white; color: indigo; text-align: center;">half day</td>
+      <td style = "background: white; color: violet; text-align: center;">half day</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-13</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">E day</td>
+      <td style = "background: white; color: red; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: orange; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: green; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: blue; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-14</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-06-17</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">A day</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-18</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-20</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-21</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">D day</td>
+      <td style = "background: white; color: red; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: orange; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: green; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: violet; text-align: center;">09:52AM to 10:45AM</td>
+    </tr>
+    <tr>
+      <td style = "background: black; color: white; text-align: left;">2024-06-24</td>
+      <td style = "background: black; color: white; text-align: left;">, Monday</td>
+      <td style = "background: black; color: white; text-align: center;">E day</td>
+      <td style = "background: black; color: white; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: black; color: white; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: black; color: white; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: black; color: white; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: black; color: white; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: black; color: white; text-align: center;">08:56AM to 09:49AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-25</td>
+      <td style = "text-align: left;">, Tuesday</td>
+      <td style = "text-align: center;">F day</td>
+      <td style = "background: white; color: red; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: orange; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: green; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: blue; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: violet; text-align: center;">08:00AM to 08:53AM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-26</td>
+      <td style = "text-align: left;">, Wednesday</td>
+      <td style = "text-align: center;">A day</td>
+      <td style = "background: white; color: red; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: green; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: blue; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: indigo; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: violet; text-align: center;">01:26PM to 02:20PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-27</td>
+      <td style = "text-align: left;">, Thursday</td>
+      <td style = "text-align: center;">B day</td>
+      <td style = "background: white; color: red; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: orange; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: green; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: blue; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">11:11AM to 12:26PM</td>
+      <td style = "background: white; color: violet; text-align: center;">12:29PM to 01:23PM</td>
+    </tr>
+    <tr>
+      <td style = "text-align: left;">2024-06-28</td>
+      <td style = "text-align: left;">, Friday</td>
+      <td style = "text-align: center;">C day</td>
+      <td style = "background: white; color: red; text-align: center;">12:29PM to 01:23PM</td>
+      <td style = "background: white; color: orange; text-align: center;">01:26PM to 02:20PM</td>
+      <td style = "background: white; color: green; text-align: center;">08:00AM to 08:53AM</td>
+      <td style = "background: white; color: blue; text-align: center;">08:56AM to 09:49AM</td>
+      <td style = "background: white; color: indigo; text-align: center;">09:52AM to 10:45AM</td>
+      <td style = "background: white; color: violet; text-align: center;">11:11AM to 12:26PM</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
