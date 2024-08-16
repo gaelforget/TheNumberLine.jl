@@ -18,4 +18,7 @@ using Test
 
     (a,p,c)=markers(collect(1:3))
     @test a[1]==:rtriangle
+
+    fil=table_school_days()
+    @test isfile(fil)
 end

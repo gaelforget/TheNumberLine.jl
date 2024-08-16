@@ -10,6 +10,7 @@ makedocs(;
         canonical="https://gaelforget.github.io/TheNumberLine.jl",
         assets=String[],
     ),
+    warnonly = [:cross_references,:missing_docs],
     pages=[
         "Home" => "index.md",
         "Docs" => "functions.md",
