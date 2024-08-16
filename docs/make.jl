@@ -26,6 +26,9 @@ for i in lst
     cp(fil_in,fil_out[1:end-4]*"jl")
 end
 
+fil_school_days=table_school_days()
+mv(fil_school_days,joinpath(@__DIR__,"build", "table_school_days.html"))
+
 fil_in=joinpath(tempdir(),"tmp.svg")
 fil_out=joinpath(@__DIR__,"build","tmp.svg")
 isfile(fil_in) ? mv(fil_in,fil_out) : nothing

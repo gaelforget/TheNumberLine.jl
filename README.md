@@ -38,6 +38,3 @@ Repeat a few times, e.g. with other numbers, to obtain something like the image 
 </p>
 </details>
 <br>
-
-
-

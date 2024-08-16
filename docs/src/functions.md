@@ -19,7 +19,7 @@ end
 
 You can try `TheNumberLine.jl` in the cloud without having to install anything.
 
-[![Dev](https://img.shields.io/badge/open-cloud-blue.svg)](https://gesis.mybinder.org/v2/gh/JuliaClimate/Notebooks/HEAD?urlpath=lab)
+[![Dev](https://img.shields.io/badge/open-cloud-blue.svg)](https://mybinder.org/v2/gh/JuliaClimate/Notebooks/HEAD?urlpath=lab)
 
 ### 2. Private Computer
 
