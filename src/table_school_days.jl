@@ -33,23 +33,23 @@ halfdays=Date.(["2023-11-22","2023-12-22","2023-09-13","2023-10-18",
         "2024-03-13","2024-04-10","2024-05-15","2024-06-12","2024-02-14"])
 
 TheNumberLine.table_school_days(tempname()*".html";
-    day1=day1,dayN=dayN,bloctimes=bloctimes,holidays=holidays,halfdays=halfdays)
+    day1=day1,dayN=dayN,bloctimes=bloctimes,
+    holidays=holidays,halfdays=halfdays,offset=0)
 ```
 """
 function table_school_days(fil=tempname()*".html";
-    day1=day1,dayN=dayN,bloctimes=bloctimes,holidays=holidays,halfdays=halfdays)
+    day1=day1,dayN=dayN,bloctimes=bloctimes,
+    holidays=holidays,halfdays=halfdays,offset=0)
 
 ndays=Date(dayN)-Date(day1)+Day(1)
 
 ndays=ndays.value
 
-rotationday=circshift(['A','B','C','D','E','F'],-3) #day1 is a D day in 2023 cause Date("2023-09-05") was actually day3 ...
-
+rotationday=circshift(['A','B','C','D','E','F'],offset)
 bloctimes=[Time(i,dateformat"II:MMp") for i in bloctimes]
-starttime=circshift(bloctimes[1:2:end],-3)
-endtime=circshift(bloctimes[2:2:end],-3)
-
-rotationcolor=circshift([:red,:orange,:gold,:green,:blue,:violet],-3)
+starttime=circshift(bloctimes[1:2:end],offset)
+endtime=circshift(bloctimes[2:2:end],offset)
+rotationcolor=circshift([:red,:orange,:gold,:green,:blue,:violet],offset)
 
 t_s(x)=Dates.format(starttime[mod1(x,6)],dateformat"II:MMp")
 t_e(x)=Dates.format(endtime[mod1(x,6)],dateformat"II:MMp")
