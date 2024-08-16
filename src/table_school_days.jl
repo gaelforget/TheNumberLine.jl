@@ -19,7 +19,7 @@ Use example:
 using TheNumberLine, Dates
 
 day1="2023-09-05"
-dayN="2023-09-05"
+dayN="2024-06-30"
 bloctimes=( "8:00am","8:53am","8:56am","9:49am","9:52am","10:45am",
             "11:11am","12:26pm","12:29pm","1:23pm","1:26pm","2:20pm")
 holidays=Date.(["2023-09-19","2023-10-09","2023-11-07","2023-11-10",
@@ -33,7 +33,7 @@ halfdays=Date.(["2023-11-22","2023-12-22","2023-09-13","2023-10-18",
         "2024-03-13","2024-04-10","2024-05-15","2024-06-12","2024-02-14"])
 
 TheNumberLine.table_school_days(tempname()*".html";
-    day1=day1,ndays=ndays,bloctimes=bloctimes,holidays=holidays,halfdays=halfdays)
+    day1=day1,dayN=dayN,bloctimes=bloctimes,holidays=holidays,halfdays=halfdays)
 ```
 """
 function table_school_days(fil=tempname()*".html";
